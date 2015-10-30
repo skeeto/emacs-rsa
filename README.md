@@ -4,6 +4,9 @@ This is an Emacs Lisp implementation of the [RSA public-key
 cryptosystem][rsa]. Emacs' calc is used for big integer operations.
 Keys are generated from `/dev/urandom`.
 
+This package doesn't deal with protocols or key storage (e.g. the hard
+parts). It's only math functions.
+
 ## Quick Demo
 
 Here's an example using a (very short) 128-bit key.
