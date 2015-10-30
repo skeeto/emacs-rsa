@@ -7,6 +7,8 @@ Keys are generated from `/dev/urandom`.
 This package doesn't deal with protocols or key storage (e.g. the hard
 parts). It's only math functions.
 
+Read more: [RSA Signatures in Emacs Lisp][blog]
+
 ## Quick Demo
 
 Here's an example using a (very short) 128-bit key.
@@ -31,3 +33,4 @@ Larger keys can take many minutes to generate and compute signatures.
 
 
 [rsa]: https://en.wikipedia.org/wiki/RSA_(cryptosystem)
+[blog]: http://nullprogram.com/blog/2015/10/30/
