@@ -45,7 +45,7 @@
     (set-buffer-multibyte nil)
     (call-process "head" "/dev/urandom" (current-buffer) nil
                   "-c" (number-to-string (/ bits 8)))
-    (calc-eval "nextprime($1, 10)" nil (rsa--buffer-to-calc-num))))
+    (calc-eval "nextprime($1, 10)" nil (rsa--buffer-to-calc-hex))))
 
 (defun rsa--inverse (a n)
   "Multiplicative inverse using extended Euclidean algorithm."
