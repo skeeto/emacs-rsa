@@ -55,12 +55,12 @@
         (newr a))
     (while (calc-eval "$1 != 0" 'pred newr)
       (let ((quotient (calc-eval "$1 \\ $2" nil r newr)))
-        (psetf y newy
-               newy (calc-eval "$1 - $2 * $3" nil
-                               y quotient newy))
-        (psetf r newr
-               newr (calc-eval "$1 - $2 * $3" nil
-                               r quotient newr))))
+        (cl-psetf y newy
+                  newy (calc-eval "$1 - $2 * $3" nil
+                                  y quotient newy))
+        (cl-psetf r newr
+                  newr (calc-eval "$1 - $2 * $3" nil
+                                  r quotient newr))))
     (when (calc-eval "$1 > 1" 'pred r)
       (error "not invertable"))
     (if (calc-eval "$1 < 0" 'pred y)
